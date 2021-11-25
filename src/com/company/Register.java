@@ -1,39 +1,39 @@
 package com.company;
-import java.util.HashMap;
 
 import java.util.Scanner;
-public class Register{
+
+import static com.company.Authentication.luhn_validering;
+import static com.company.Authentication.printMessage;
+
+public class Register {
 
 
 
-
-    HashMap<Integer,String > registerUser = new HashMap<>();
-
-
-
+    Scanner sc= new Scanner(System.in);
 
     public Register() {
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter personnumber 10 digits ");
-        int personNumber = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Enter password");
-        String password = sc.nextLine();
+        sc = new Scanner(System.in);
+        System.out.print("Enter your personnummer 10 digits:");
+        String personNummer = sc.nextLine();
 
-        // Creates new entry in hashMap of user input
-        registerUser.put(personNumber,password);
+        boolean personnummercheck = luhn_validering(personNummer);
 
-        System.out.println("New Gymuser " + personNumber + " succesfully registerd.");
-        System.out.println("------------------------------------");
-        System.out.println(registerUser);
+
+        printMessage(personnummercheck);
+        sc.close();
+
 
 
     }
 
 
 
-    public memberType(){
+
+
+
+
+    public void memberType(){
 
         Scanner sc= new Scanner(System.in);
         System.out.println("Välj ett av medlemskapen genom att ange antal månader du vill vara medlem:");
