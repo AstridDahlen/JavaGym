@@ -11,9 +11,9 @@ public class Main {
 
 
         Scanner sc= new Scanner(System.in);
-        //int meny= sc.nextInt();
-
-        while(true)
+        int meny= sc.nextInt();
+              // fungerar inte som den ska ännu
+        while(meny!=0)
         {
           System.out.println(textmenu);
           int newmenu = sc.nextInt();
