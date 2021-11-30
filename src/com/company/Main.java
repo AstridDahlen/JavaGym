@@ -4,33 +4,54 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-
+    public static void main(String args[]) {
+        //GUI  = new GUI();
+        String textmenu = "Welcome to The Gym!\n1.Login\n2.Book a Exercise\n3.Register\n0.Exit" ;
+        System.out.println(textmenu);
 
 
         Scanner sc= new Scanner(System.in);
-        System.out.println(" Welcome to The Gym!");
-        System.out.println("1.Login");
-        System.out.println("2.Book a Exercise");
-        System.out.println("3.Register");
+        //int meny= sc.nextInt();
 
-        int meny= sc.nextInt();
-
+        while(true)
         {
-            if (meny == 1) {
-                System.out.println("Login Entry");
-                new Login();
-            } else if (meny == 2) {
-                System.out.println("Booking entry");
-            } else if (meny == 3) {
-                System.out.println("Register entry");
-                new Authentication();
-                new Register();
-                new Membertype();
-            }
+          System.out.println(textmenu);
+          int newmenu = sc.nextInt();
+
+                while(newmenu!=0)
+                    {
+                            if(newmenu==1)
+                            {
+                                new Login();
+                                break;
+                            }
+                            else if(newmenu==2)
+                            {
+                                new BookExercise();
+                                break;
+                            }
+                            else if(newmenu==3)
+                            {
+
+                             new Authentication();
+                             new Register();
+                             new Membertype();
+                             break;
+
+                        }
+                        else
+                        {
+
+                        }  
+
+
+
+           }
+                  }
         }
 
 
+     }   
 
 
 
@@ -38,5 +59,44 @@ public class Main {
 
 
 
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
