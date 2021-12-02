@@ -1,19 +1,34 @@
 package com.company;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+
+import static com.company.Register.addNewMember;
+
 public class Login {
 
 
 
+
+
+
     public  Login(){
-        ArrayList<String> addNewMember = new ArrayList<>();
-                // kan inte testa förrens listan funkar som den ska
+
+        System.out.println(addNewMember);
         Scanner sc= new Scanner(System.in);
         System.out.print("Login: Enter your personnumber 10 digits");
         String personNummer = sc.nextLine();
-        if(addNewMember.contains(personNummer))
-        { System.out.println("inloggad");   }
+
+
+
+            if(addNewMember.contains(personNummer)){
+
+                System.out.println(" du är nu inloggad"+ " " + personNummer);
+
+            }else{ System.out.println("Du har inte loggat in"); }
+
+
+
+
 
 
     }
