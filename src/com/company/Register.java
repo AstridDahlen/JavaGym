@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static com.company.Authentication.luhn_validering;
-import static com.company.Authentication.printMessage;
+import static com.company.Authentication.printInprompt;
 
 public class Register {
 
@@ -12,20 +12,17 @@ public class Register {
 
 
     public Register() {
-
-
-
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your personnummer 10 digits:");
         String personNummer = sc.nextLine();
         boolean personnummercheck = luhn_validering(personNummer);
-        printMessage(personnummercheck);
+        printInprompt(personnummercheck);
 
         if(personnummercheck)
         {
-        addNewMember.add(personNummer);
-        System.out.println("Sucsessfull registration" + addNewMember);
-        new Membertype();
+            addNewMember.add(personNummer);
+            System.out.println("Sucsessfull registration" + addNewMember);
+            new Membertype();
         }
         else
         {

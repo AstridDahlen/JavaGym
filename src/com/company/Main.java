@@ -13,26 +13,23 @@ public class Main {
         {
           System.out.println(textmenu);
           int meny = sc.nextInt();
-
                 while(meny!=0)
                     {
-                            if(meny==1)
-                            {
-                                new Login();
-                                break;
-                            }
-                            else if(meny==2)
-                            {
-                                new BookExercise();
-                                break;
-                            }
-                            else if(meny==3)
-                            {
-
-                             new Authentication();
-                             new Register();
-                             break;
-
+                        if(meny==1)
+                        {
+                            new Login();
+                            break;
+                        }
+                        else if(meny==2)
+                        {
+                            new BookExercise();
+                            break;
+                        }
+                        else if(meny==3)
+                        {
+                            new Authentication();
+                            new Register();
+                            break;
                         }
                         else
                         {
