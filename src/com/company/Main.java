@@ -29,9 +29,11 @@ public class Main {
                             new Register();
                             break;
                         }
+
                         else
                         {
                             System.out.println("Enter a digit between 1-3");
+                            break;
                         }
 
            }
