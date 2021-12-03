@@ -22,9 +22,10 @@ public class Login {
 
             if(addNewMember.contains(personNummer)){
 
-                System.out.println(" du är nu inloggad"+ " " + personNummer);
+                System.out.println("Welcome to your account " + " " + personNummer);
+                
 
-            }else{ System.out.println("Du har inte loggat in"); }
+            }else{ System.out.println("Unsucsessfull Login"); }
 
 
 
