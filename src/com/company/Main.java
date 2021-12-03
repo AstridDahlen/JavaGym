@@ -11,6 +11,10 @@ public class Main {
         {
           System.out.println(textmenu);
           int meny = sc.nextInt();
+          if(meny==0){
+              System.out.println("See you soon at the gym!");
+              System.exit(1);
+          }
                 while(meny!=0)
                     {
                         if(meny==1)
@@ -30,13 +34,7 @@ public class Main {
                             break;
                         }
 
-                        else
-                        {
-                            System.out.println("Enter a digit between 1-3");
-                            break;
-                        }
-
-           }
+                    }
         }
     }
 }
