@@ -23,6 +23,7 @@ public class Register {
         if(personnummercheck){
         addNewMember.add(personNummer);
         System.out.println("Sucsessfull registration" + addNewMember);
+        new Membertype();
         }else{System.out.println("You have not been registered, personnumber not authenticated");
 
             }
