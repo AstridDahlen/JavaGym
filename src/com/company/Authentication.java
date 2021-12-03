@@ -4,10 +4,15 @@ public class Authentication {
      static boolean luhn_validering(String personNumber) {
 
            int insertNumber = personNumber.length() - 10;
+
            if (insertNumber < 0)
            {
-               throw new IllegalArgumentException("Insert 10 numbers!");
+
+               System.out.println("Insert 10 numbers!");
+               new Register();
+
            }
+
         personNumber = personNumber.substring(insertNumber, 10 + insertNumber);
         int sum = 0;
         for (int i = 0; i < personNumber.length(); i++)
