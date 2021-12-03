@@ -1,9 +1,8 @@
 package com.company;
-
 public class Authentication {
 
      static boolean luhn_validering(String personNumber) {
-         
+
            int insertNumber = personNumber.length() - 10;
            if (insertNumber < 0)
            {

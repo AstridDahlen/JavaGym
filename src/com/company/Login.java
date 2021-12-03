@@ -1,7 +1,5 @@
 package com.company;
-
 import java.util.Scanner;
-
 import static com.company.Register.addNewMember;
 
 public class Login {

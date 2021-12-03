@@ -1,8 +1,6 @@
 package com.company;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import static com.company.Authentication.luhn_validering;
 import static com.company.Authentication.printInprompt;
 
