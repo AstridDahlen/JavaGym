@@ -8,17 +8,17 @@ public class Membertype {
     public Membertype(){
 
         Scanner sc= new Scanner(System.in);
-        System.out.println("Välj ett av medlemskapen genom att ange antal månader du vill vara medlem:");
-        System.out.println("1-2 Månader, Månadskostnad 400kr");
-        System.out.println("3-6 Månader, Månadskostnad 350kr");
-        System.out.println("7-12 Månader, Månadskostnad 300kr");
-        System.out.println("12 och längre , Månadskostnad 250kr");
+        System.out.println("Choose a membership:");
+        System.out.println("1-2 Months, Monthly cost 400kr");
+        System.out.println("3-6 Months, Monthly cost 350kr");
+        System.out.println("7-12 Months, Monthly cost 300kr");
+        System.out.println("12 or Months , Monthly cost 250kr");
         int membership= sc.nextInt();
 
-        if (membership <= 2){System.out.println("Du har valt " + membership +" månader din kostnad är 400 kr per månad din totalkostnad är "+ membership*400 + "kr");}
-        else if (membership <=6){System.out.println("Du har valt " + membership + " månader din kostnad är 350 kr per månad din totalkostnad är "+ membership*350 + "kr");}
-        else if (membership <=12){System.out.println("Du har valt " + membership + " månader din kostnad är 300 kr per månad din totalkostnad är "+ membership*300 + "kr");}
-        else if (membership <=13){System.out.println("Du har valt " + membership + " månader din kostnad är 250 kr per månad din totalkostnad är "+ membership*250 + "kr");}
+        if (membership <= 2){System.out.println("You have choosen " + membership +" and your monthly billing is 400 kr and your total cost is "+ membership*400 + "kr");}
+        else if (membership <=6){System.out.println("You have choosen " + membership + " and your monthly billing is 350 kr and your total cost is "+ membership*350 + "kr");}
+        else if (membership <=12){System.out.println("You have choosen " + membership + " and your monthly billing is 300 kr and your total cost is "+ membership*300 + "kr");}
+        else if (membership <=13){System.out.println("You have choosen " + membership + " and your monthly billing is 250 kr and your total cost is "+ membership*250 + "kr");}
 
     }
 

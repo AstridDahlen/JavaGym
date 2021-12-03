@@ -9,7 +9,6 @@ public class Main {
         String textmenu = "Welcome to The Gym!\n1.Login\n2.Book a Exercise\n3.Register\n0.Exit" ;
         Scanner sc= new Scanner(System.in);
 
-
         while(true)
         {
           System.out.println(textmenu);
@@ -38,16 +37,12 @@ public class Main {
                         else
                         {
                             System.out.println("Enter a digit between 1-3");
-                        }  
-
-
+                        }
 
            }
-                  }
         }
-
-
-     }   
+    }
+}
 
 
 
