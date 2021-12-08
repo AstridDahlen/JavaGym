@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Booking.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Booking.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Booking {</span>
+
+
+       <span class="s0">public </span><span class="s1">Booking() {</span>
+
+        <span class="s1">String response</span><span class="s0">;</span>
+        <span class="s1">String bookingstop = </span><span class="s2">&quot;Stopp&quot;</span><span class="s0">;</span>
+
+        <span class="s0">do </span><span class="s1">{</span>
+            <span class="s1">System.out.printf(</span><span class="s2">&quot;Välkommen, vill du boka ett yogapass, aerobicspass eller spinningpass? Skriv stopp för att avsluta.%n&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+            <span class="s1">response = input.nextLine()</span><span class="s0">;</span>
+
+
+
+            <span class="s0">if </span><span class="s1">(response.equalsIgnoreCase(</span><span class="s2">&quot;Yoga&quot;</span><span class="s1">) || response.equalsIgnoreCase(</span><span class="s2">&quot;Yogapass&quot;</span><span class="s1">)) {</span>
+                <span class="s0">new </span><span class="s1">Yoga()</span><span class="s0">;</span>
+
+            <span class="s1">}</span>
+
+            <span class="s0">else if </span><span class="s1">(response.equalsIgnoreCase(</span><span class="s2">&quot;Aerobics&quot;</span><span class="s1">) || response.equalsIgnoreCase(</span><span class="s2">&quot;Aerobicspass&quot;</span><span class="s1">)) {</span>
+                <span class="s1">Aerobics.aerobics()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+
+            <span class="s0">else if </span><span class="s1">(response.equalsIgnoreCase(</span><span class="s2">&quot;Spinning&quot;</span><span class="s1">) || response.equalsIgnoreCase(</span><span class="s2">&quot;Spinningpass&quot;</span><span class="s1">)) {</span>
+                <span class="s1">Spinning.spinning()</span><span class="s0">;</span>
+            <span class="s1">}</span>
+
+            <span class="s0">else if </span><span class="s1">(response.equalsIgnoreCase(bookingstop)) {</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Dina platser är bokade!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+
+        <span class="s1">}</span>
+        <span class="s0">while </span><span class="s1">(!response.equalsIgnoreCase(bookingstop))</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

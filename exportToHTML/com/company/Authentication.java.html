@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Authentication.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Authentication.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">Authentication {</span>
+
+     <span class="s0">static boolean </span><span class="s1">luhn_validering(String personNumber) {</span>
+
+           <span class="s0">int </span><span class="s1">insertNumber = personNumber.length() - </span><span class="s2">10</span><span class="s0">;</span>
+
+           <span class="s0">if </span><span class="s1">(insertNumber &lt; </span><span class="s2">0</span><span class="s1">)</span>
+           <span class="s1">{</span>
+
+               <span class="s1">System.out.println(</span><span class="s3">&quot;Insert 10 numbers!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+               <span class="s0">new </span><span class="s1">Register()</span><span class="s0">;</span>
+
+           <span class="s1">}</span>
+
+        <span class="s1">personNumber = personNumber.substring(insertNumber</span><span class="s0">, </span><span class="s2">10 </span><span class="s1">+ insertNumber)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">sum = </span><span class="s2">0</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s2">0</span><span class="s0">; </span><span class="s1">i &lt; personNumber.length()</span><span class="s0">; </span><span class="s1">i++)</span>
+        <span class="s1">{</span>
+            <span class="s0">char </span><span class="s1">parse = personNumber.charAt(i)</span><span class="s0">;</span>
+            <span class="s0">int </span><span class="s1">number = parse - </span><span class="s3">'0'</span><span class="s0">;</span>
+            <span class="s0">int </span><span class="s1">total</span><span class="s0">;</span>
+
+            <span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">)</span>
+            <span class="s1">{</span>
+                <span class="s1">total = number * </span><span class="s2">1</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">else</span>
+            <span class="s1">{</span>
+                <span class="s1">total = number * </span><span class="s2">2</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s0">if </span><span class="s1">(total &gt; </span><span class="s2">9</span><span class="s1">)</span>
+                <span class="s1">total -= </span><span class="s2">9</span><span class="s0">;</span>
+            <span class="s1">sum += total</span><span class="s0">;</span>
+
+        <span class="s1">}</span>
+        <span class="s0">return </span><span class="s1">(sum % </span><span class="s2">10 </span><span class="s1">== </span><span class="s2">0</span><span class="s1">)</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+
+    <span class="s0">static void </span><span class="s1">printInprompt(</span><span class="s0">boolean </span><span class="s1">correct) {</span>
+
+
+        <span class="s0">if </span><span class="s1">(correct) {</span>
+            <span class="s1">System.out.print(</span><span class="s3">&quot;Authenticated!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+
+        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+            <span class="s1">System.out.print(</span><span class="s3">&quot;Not Authenticated!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+
+
+
+
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+
+
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
