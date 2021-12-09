@@ -1,6 +1,6 @@
 package com.company;
 public class Authentication {
-
+// Authentication
      static boolean luhn_validering(String personNumber) {
 
            int insertNumber = personNumber.length() - 10;
@@ -9,6 +9,7 @@ public class Authentication {
            {
 
                System.out.println("Insert 10 numbers!");
+               //if not 10 numbers run register again
                new Register();
 
            }
@@ -37,7 +38,7 @@ public class Authentication {
         return (sum % 10 == 0);
 
     }
-
+// print for correkt validation
     static void printInprompt(boolean correct) {
 
 

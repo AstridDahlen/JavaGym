@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Booking {
-
+    // List to keep booking
     static ArrayList<String> yogaavailable = new ArrayList<>(8);
     static ArrayList<String> aerobicsavailable = new ArrayList<>(8);
     static ArrayList<String> spinningavailable = new ArrayList<>(8);
@@ -14,9 +14,9 @@ public class Booking {
 
 
         String response;
-        String bookingstop = "Stopp";
+        String bookingstop = "q";
 
-
+        // varför har vi dessa listor??
         yogaavailable.add("1a");
         yogaavailable.add("2a");
         yogaavailable.add("3a");
@@ -49,23 +49,23 @@ public class Booking {
 
 
         do {
-            System.out.printf("Välkommen, vill du boka ett yogapass, aerobicspass eller spinningpass? Skriv stopp för att avsluta.%n");
+            System.out.printf("Welcome do you want to book Yoga, Areobics or Spinning? Type q for exit.%n");
             Scanner input = new Scanner(System.in);
             response = input.nextLine();
 
 
 
-            if (response.equalsIgnoreCase("Yoga") || response.equalsIgnoreCase("Yogapass")) {
+            if (response.equalsIgnoreCase("Yoga") || response.equalsIgnoreCase("Yoga")) {
 
 
 
                 String passresponse;
-                String stop = "Stopp";
+                String stop = "q";
 
 
 
 
-                System.out.println("Välj plats eller skriv stopp för att avsluta:");
+                System.out.println("Enter your choice: end qith q");
                 for (int counter = 0; counter < yogaavailable.size(); counter++) {
                     System.out.println(yogaavailable.get(counter));
 
@@ -75,17 +75,17 @@ public class Booking {
                 passresponse = input.nextLine();
 
                 if (!yogaavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
-                    System.out.println("Tyvärr, platsen är redan upptagen.");
+                    System.out.println("The entry is already booked.");
 
                 }
                 else if (!yogaavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
-                    System.out.println("Ange en giltig plats.");
+                    System.out.println("Enter a number and a letter.");
                 }
 
                 else {
                     yogaavailable.remove(passresponse);
 
-                    System.out.printf("Klart!%n");
+                    System.out.printf("Successful bookning!%n");
                 }
             }
 
@@ -95,12 +95,12 @@ public class Booking {
             if (response.equalsIgnoreCase("Aerobics") || response.equalsIgnoreCase("Aerobicspass")) {
 
                 String passresponse;
-                String stop = "Stopp";
+                String stop = "q";
 
 
 
 
-                System.out.println("Välj plats eller skriv stopp för att avsluta:");
+                System.out.println("Enter your choice: end qith q");
                 for (int counter = 0; counter < aerobicsavailable.size(); counter++) {
                     System.out.println(aerobicsavailable.get(counter));
 
@@ -110,17 +110,17 @@ public class Booking {
                 passresponse = input.nextLine();
 
                 if (!aerobicsavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
-                    System.out.println("Tyvärr, platsen är redan upptagen.");
+                    System.out.println("The entry is already booked.");
 
                 }
                 else if (!aerobicsavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
-                    System.out.println("Ange en giltig plats.");
+                    System.out.println("Enter a number and a letter.");
                 }
 
                 else {
                     aerobicsavailable.remove(passresponse);
 
-                    System.out.printf("Klart!%n");
+                    System.out.printf("Successful bookning!%n");
                 }
             }
 
@@ -128,12 +128,12 @@ public class Booking {
             if (response.equalsIgnoreCase("Spinning") || response.equalsIgnoreCase("Spinningpass")) {
 
                 String passresponse;
-                String stop = "Stopp";
+                String stop = "q";
 
 
 
 
-                System.out.println("Välj plats eller skriv stopp för att avsluta:");
+                System.out.println("Enter your choice: end qith q");
                 for (int counter = 0; counter < spinningavailable.size(); counter++) {
                     System.out.println(spinningavailable.get(counter));
 
@@ -143,24 +143,24 @@ public class Booking {
                 passresponse = input.nextLine();
 
                 if (!spinningavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
-                    System.out.println("Tyvärr, platsen är redan upptagen.");
+                    System.out.println("The entry is already booked.");
 
                 }
                 else if (!spinningavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
-                    System.out.println("Ange en giltig plats.");
+                    System.out.println("Enter a number and a letter.");
                 }
 
                 else {
                     spinningavailable.remove(passresponse);
 
-                    System.out.printf("Klart!%n");
+                    System.out.printf("Successful bookning!%n");
                     break;
                 }
             }
 
 
             else if (response.equalsIgnoreCase(bookingstop)) {
-                System.out.println("Dina platser är bokade!");
+                System.out.println("Entry Booked!");
 
             }
         }

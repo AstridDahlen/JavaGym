@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]) {
-
+        // Menu to take in value
         String textmenu = "Welcome to The Gym!\n1.Login\n2.Register\n0.Exit" ;
         Scanner sc= new Scanner(System.in);
-
-
+        //Nested while loop to be able to go back when inside a choice
         while(true)
         {
           System.out.println(textmenu);
@@ -22,27 +21,15 @@ public class Main {
                     {
                      if(meny==1)
                         {
-
                            new Login();
-                           new Booking().booking();
-                           
                            break;
-
-                            
                         }
-
-                        
-
                         else if(meny==2)
                         {
                             new Authentication();
                             new Register();
                             break;
                         }
-
-
-
-
              }
         }
     }
