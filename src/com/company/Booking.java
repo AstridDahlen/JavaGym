@@ -16,7 +16,7 @@ public class Booking {
         String response;
         String bookingstop = "q";
 
-        // varför har vi dessa listor??
+        //  The available booking
         yogaavailable.add("1a");
         yogaavailable.add("2a");
         yogaavailable.add("3a");
@@ -47,7 +47,7 @@ public class Booking {
         spinningavailable.add("2c");
         spinningavailable.add("3c");
 
-
+        //  keep booking until stop
         do {
             System.out.printf("Welcome do you want to book Yoga, Areobics or Spinning? Type q for exit.%n");
             Scanner input = new Scanner(System.in);
@@ -63,7 +63,7 @@ public class Booking {
                 String stop = "q";
 
 
-
+                // available choice after entry
 
                 System.out.println("Enter your choice: end qith q");
                 for (int counter = 0; counter < yogaavailable.size(); counter++) {
@@ -73,19 +73,20 @@ public class Booking {
 
 
                 passresponse = input.nextLine();
-
+                    // if entry booked error message
                 if (!yogaavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
                     System.out.println("The entry is already booked.");
-
+                    // if wrong entry error message
                 }
                 else if (!yogaavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
                     System.out.println("Enter a number and a letter.");
                 }
-
+                // the entry chosen is removed
                 else {
                     yogaavailable.remove(passresponse);
 
                     System.out.printf("Successful bookning!%n");
+                    break;
                 }
             }
 
@@ -99,7 +100,7 @@ public class Booking {
 
 
 
-
+                // se comments above the difference is the name but same code structure
                 System.out.println("Enter your choice: end qith q");
                 for (int counter = 0; counter < aerobicsavailable.size(); counter++) {
                     System.out.println(aerobicsavailable.get(counter));
@@ -108,19 +109,21 @@ public class Booking {
 
 
                 passresponse = input.nextLine();
-
+                // se comments above the difference is the name but same code structure
                 if (!aerobicsavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
                     System.out.println("The entry is already booked.");
 
                 }
+                // se comments above the difference is the name but same code structure
                 else if (!aerobicsavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
                     System.out.println("Enter a number and a letter.");
                 }
-
+                // se comments above the difference is the name but same code structure
                 else {
                     aerobicsavailable.remove(passresponse);
 
                     System.out.printf("Successful bookning!%n");
+                    break;
                 }
             }
 
@@ -132,7 +135,7 @@ public class Booking {
 
 
 
-
+                // se comments above the difference is the name but same code structure
                 System.out.println("Enter your choice: end qith q");
                 for (int counter = 0; counter < spinningavailable.size(); counter++) {
                     System.out.println(spinningavailable.get(counter));
@@ -141,15 +144,15 @@ public class Booking {
 
 
                 passresponse = input.nextLine();
-
+                // se comments above the difference is the name but same code structure
                 if (!spinningavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
                     System.out.println("The entry is already booked.");
-
+                    // se comments above the difference is the name but same code structure
                 }
                 else if (!spinningavailable.contains(passresponse) && !passresponse.equalsIgnoreCase(stop)) {
                     System.out.println("Enter a number and a letter.");
                 }
-
+                // se comments above the difference is the name but same code structure
                 else {
                     spinningavailable.remove(passresponse);
 

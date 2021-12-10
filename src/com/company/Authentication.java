@@ -38,7 +38,7 @@ public class Authentication {
         return (sum % 10 == 0);
 
     }
-// print for correkt validation
+// print for correct validation
     static void printInprompt(boolean correct) {
 
 

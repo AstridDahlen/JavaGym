@@ -10,7 +10,7 @@ public class Login {
         Scanner sc= new Scanner(System.in);
         System.out.print("Login: Enter your personnumber 10 digits");
         String personNummer = sc.nextLine();
-        // if list contains member login
+        // if list contains member login and choose exercise
         if(addNewMember.contains(personNummer))
         {
             System.out.println("Welcome to your account " + " " + personNummer);
@@ -19,8 +19,9 @@ public class Login {
 
         }
         else
+        // error message if not member
         {
-            System.out.println("Unsucsessfull Login");
+            System.out.println("Unsuccessful Login");
         }
 
 

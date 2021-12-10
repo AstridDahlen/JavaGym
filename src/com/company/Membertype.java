@@ -4,7 +4,7 @@ public class Membertype {
 
 
     public Membertype(){
-        // Shows the total and mothly price for the chocie of the membership
+        // Shows the total and monthly price for the choice of the membership
         Scanner sc= new Scanner(System.in);
         System.out.println("Choose a membership:");
         System.out.println("1-2 Months, Monthly cost 400kr");

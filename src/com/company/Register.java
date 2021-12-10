@@ -13,7 +13,7 @@ public class Register {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your personnummer 10 digits:");
         String personNummer = sc.nextLine();
-        // if validation is valid add memeber in list and give member choice for membership
+        // if validation is valid add member in list and give member choice for membership
         boolean personnummercheck = luhn_validering(personNummer);
         printInprompt(personnummercheck);
 
@@ -23,6 +23,7 @@ public class Register {
             System.out.println("Sucsessfull registration" + addNewMember);
             new Membertype();
         }
+        // error message if not authenticated
         else
         {
             System.out.println("You have not been registered, personnumber not authenticated, Pleas try again");
