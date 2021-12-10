@@ -1,1 +1,1 @@
-aa
+Gym App for Wake Up Gym
