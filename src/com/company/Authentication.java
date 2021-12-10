@@ -1,6 +1,7 @@
 package com.company;
 public class Authentication {
-// Authentication
+// Authentication we assume that members are not older than 100 years
+    // we only use digits and no hyphen between numbers
      static boolean luhn_validering(String personNumber) {
 
            int insertNumber = personNumber.length() - 10;
@@ -50,13 +51,6 @@ public class Authentication {
             System.out.print("Not Authenticated!");
 
 
-
-
-
         }
     }
-
-
-
-
 }

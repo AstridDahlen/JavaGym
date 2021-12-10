@@ -14,8 +14,9 @@ public class Login {
         if(addNewMember.contains(personNummer))
         {
             System.out.println("Welcome to your account " + " " + personNummer);
+
             // when logged in run booking
-            new Booking().booking();
+            Booking.booking();
 
         }
         else
@@ -24,8 +25,6 @@ public class Login {
             System.out.println("Unsuccessful Login");
         }
 
-
     }
-
 
 }
