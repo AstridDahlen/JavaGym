@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import static com.company.Register.addNewMember;
 
+
 public class Login {
     static ArrayList<String> currentUser = new ArrayList<>();
 
@@ -19,6 +20,7 @@ public class Login {
         Scanner sc= new Scanner(System.in);
         System.out.print("Login: Enter your personnumber 10 digits");
         String personNummer = sc.nextLine();
+
         // if list contains member login and choose exercise
         if(addNewMember.contains(personNummer))
         {
@@ -26,7 +28,8 @@ public class Login {
             currentUser.add(personNummer);
 
             // when logged in run booking
-            Booking.booking();
+           Booking.booking();
+
 
         }
         else

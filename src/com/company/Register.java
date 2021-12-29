@@ -20,7 +20,7 @@ public class Register {
         if(personnummercheck)
         {
             addNewMember.add(personNummer);
-            System.out.println("Sucsessfull registration" + addNewMember);
+            System.out.println("Sucsessfull registration" );
             new Membertype();
         }
         // error message if not authenticated
