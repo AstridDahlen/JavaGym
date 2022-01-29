@@ -21,6 +21,7 @@ public class Aerobics {
         aerobicsavailable.add("2c");
         aerobicsavailable.add("3a");
         aerobicsavailable.add("3b");
+
         aerobicsavailable.add("3c");
     }
 

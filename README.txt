@@ -1,1 +1,1 @@
-Gym App for Wake Up Gym
+Gym App for Wake Up GymHej
